@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.nav-tabs .nav-link {
+  // border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+  color: var(--bs-nav-tabs-link-active-color) !important;
+
+  &.active {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+  }
+}
