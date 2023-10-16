@@ -1,8 +1,337 @@
 <div class="card">
   <div class="card-body">
-    <div class="input-group mb-3">
+    <!-- <div class="input-group mb-3">
       <input type="text" class="form-control form-control-lg" placeholder="Search..." aria-label="Search" aria-describedby="search">
       <button class="btn btn-primary" type="button" id="search">Search</button>
+    </div> -->
+    <div class="row mb-5">
+      <div class="col-md-12 pb-4">
+        <div class="pagetitle-block">
+          <div class="title fs-24">Advanced Search</div>
+        </div>
+      </div>
+      <!-- Query -->
+      <div class="col-md-6">
+        <div class="title-block">
+          <div class="title"><span>1</span>Query</div>
+        </div>
+        <div class="row ft-query-row">
+          <div class="form-group col-md-6">
+            <label for="ft-trade" class="fs-16 form-label">Trade</label>
+            <select class="form-control form-select" id="ft-trade">
+              <option value="0" selected>Select</option>
+              <option value="I">Imports</option>
+              <option value="E">Exports</option>
+              <option value="R">Re-Export</option>
+              <option value="T">Total Exports</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="ft-frequency" class="fs-16 form-label">Frequency</label>
+            <select class="form-control form-select" id="ft-frequency">
+              <option value="0">Select</option>
+              <option value="M">Monthly</option>
+              <option value="Q">Quarterly</option>
+              <option value="Y" selected>Yearly</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Period -->
+      <div class="col-md-3">
+        <div class="title-block">
+          <div class="title"><span>2</span>Period</div>
+        </div>
+        <div class="row ft-year-row">
+          <div class="form-group col-md-12">
+            <label for="year" class="fs-16 form-label">Year</label>
+            <select class="form-control form-select" name="years">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Country -->
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-block">
+              <div class="title"><span>3</span>Country</div>
+            </div>
+            <div class="row ft-year-row">
+              <div class="col-md-12">
+                <label class="fs-16 form-label">Select Country</label>
+                <select class="form-control form-select" name="country">
+                  <option value="374">Afghanistan</option>
+                  <option value="337">Albania</option>
+                  <option value="1026">Algeria</option>
+                  <option value="473">Angola</option>
+                  <option value="431">Argentina</option>
+                  <option value="371">Armenia</option>
+                  <option value="492">Australia</option>
+                  <option value="309">Austria</option>
+                  <option value="369">Azerbaijan</option>
+                  <option value="1015">Bahrain</option>
+                  <option value="365">Bangladesh</option>
+                  <option value="402">Barbados</option>
+                  <option value="339">Belarus</option>
+                  <option value="300">Belgium</option>
+                  <option value="403">Belize</option>
+                  <option value="379">Bhutan</option>
+                  <option value="424">Bolivia</option>
+                  <option value="324">Bosnia and Herzegovina</option>
+                  <option value="461">Botswana</option>
+                  <option value="426">Brazil</option>
+                  <option value="381">Brunei Darussalam</option>
+                  <option value="326">Bulgaria</option>
+                  <option value="479">Burkina Faso</option>
+                  <option value="484">Burundi</option>
+                  <option value="358">Cambodia</option>
+                  <option value="453">Cameroon</option>
+                  <option value="396">Canada</option>
+                  <option value="487">Cape Verde</option>
+                  <option value="490">Central African Republic</option>
+                  <option value="448">Chad</option>
+                  <option value="430">Chile</option>
+                  <option value="353">China</option>
+                  <option value="433">Colombia</option>
+                  <option value="306">Comoro Islands</option>
+                  <option value="543">Companies Exports - Unspecified Destination</option>
+                  <option value="483">Congo</option>
+                  <option value="485">Congo, Dem. Rep. Of</option>
+                  <option value="420">Costa Rica</option>
+                  <option value="323">Croatia</option>
+                  <option value="418">Cuba</option>
+                  <option value="332">Cyprus</option>
+                  <option value="321">Czech</option>
+                  <option value="352">Democratic Republic of Korea</option>
+                  <option value="302">Denmark</option>
+                  <option value="474">Djibouti</option>
+                  <option value="432">Dominican</option>
+                  <option value="503">Dominican Republic</option>
+                  <option value="423">Ecuador</option>
+                  <option value="1029">Egypt</option>
+                  <option value="422">El Salvador</option>
+                  <option value="507">Equatorial Guinea</option>
+                  <option value="478">Eritrea</option>
+                  <option value="317">Estonia</option>
+                  <option value="466">Ethiopia</option>
+                  <option value="494">Fiji</option>
+                  <option value="316">Finland</option>
+                  <option value="296">France</option>
+                  <option value="454">Gabon</option>
+                  <option value="488">Gambia</option>
+                  <option value="382">Georgia</option>
+                  <option value="303">Germany</option>
+                  <option value="451">Ghana</option>
+                  <option value="336">Gibraltar</option>
+                  <option value="330">Greece</option>
+                  <option value="399">GreenLand</option>
+                  <option value="400">Grenada</option>
+                  <option value="419">Guatemala</option>
+                  <option value="486">Guinea</option>
+                  <option value="450">Guinea Bissau</option>
+                  <option value="401">Guyana</option>
+                  <option value="444">Haiti</option>
+                  <option value="421">Honduras</option>
+                  <option value="355">Hong Kong</option>
+                  <option value="333">Hungary</option>
+                  <option value="334">Iceland</option>
+                  <option value="366">India</option>
+                  <option value="364">Indonesia</option>
+                  <option value="375">Iran</option>
+                  <option value="1035">Iraq</option>
+                  <option value="311">Ireland</option>
+                  <option value="299">Italy</option>
+                  <option value="449">Ivory Coast</option>
+                  <option value="437">Jamaica</option>
+                  <option value="350">Japan</option>
+                  <option value="1032">Jordan</option>
+                  <option value="370">Kazakstan</option>
+                  <option value="465">Kenya</option>
+                  <option value="1014">Kuwait</option>
+                  <option value="386">Kyrgyzstan</option>
+                  <option value="318">Latvia</option>
+                  <option value="1033">Lebanon</option>
+                  <option value="458">Lesotho</option>
+                  <option value="469">Liberia</option>
+                  <option value="1028">Libya</option>
+                  <option value="340">Liechtenstein</option>
+                  <option value="319">Lithuania</option>
+                  <option value="301">Luxembourg</option>
+                  <option value="383">Macau</option>
+                  <option value="335">Macedonia</option>
+                  <option value="460">Madagascar</option>
+                  <option value="463">Malawi</option>
+                  <option value="361">Malaysia</option>
+                  <option value="363">Maldives</option>
+                  <option value="447">Mali</option>
+                  <option value="331">Malta</option>
+                  <option value="1024">Mauritania</option>
+                  <option value="475">Mauritius</option>
+                  <option value="416">Mexico</option>
+                  <option value="338">Moldova</option>
+                  <option value="391">Mongolia</option>
+                  <option value="327">Montenegro</option>
+                  <option value="1025">Morocco</option>
+                  <option value="477">Mozambique</option>
+                  <option value="376">Myanmar</option>
+                  <option value="470">Namibia</option>
+                  <option value="499">Nauru</option>
+                  <option value="377">Nepal</option>
+                  <option value="298">Netherlands</option>
+                  <option value="380">New Guinea</option>
+                  <option value="495">New Zealand</option>
+                  <option value="445">Nicaragua</option>
+                  <option value="472">Niger</option>
+                  <option value="452">Nigeria</option>
+                  <option value="315">Norway</option>
+                  <option value="546">Not Stated Countries</option>
+                  <option value="1016">Oman</option>
+                  <option value="368">Pakistan</option>
+                  <option value="1031">Palestine</option>
+                  <option value="417">Panama</option>
+                  <option value="428">Paraguay</option>
+                  <option value="429">Peru</option>
+                  <option value="359">Philippines</option>
+                  <option value="320">Poland</option>
+                  <option value="308">Portugal</option>
+                  <option value="1019">Qatar</option>
+                  <option value="480">Republic of Benin</option>
+                  <option value="481">Reunion</option>
+                  <option value="328">Romania</option>
+                  <option value="312">Russia</option>
+                  <option value="468">Rwanda</option>
+                  <option value="1018">Saudi Arabia</option>
+                  <option value="476">Senegal</option>
+                  <option value="325">Serbia</option>
+                  <option value="496">Seychelles</option>
+                  <option value="489">Seychelles</option>
+                  <option value="455">Sierra Leone</option>
+                  <option value="360">Singapore</option>
+                  <option value="322">Slovakia</option>
+                  <option value="305">Slovenia</option>
+                  <option value="1022">Somalia</option>
+                  <option value="471">South Africa</option>
+                  <option value="351">South Korea</option>
+                  <option value="1020">South Sudan</option>
+                  <option value="304">Spain</option>
+                  <option value="367">Sri Lanka</option>
+                  <option value="1023">Sudan</option>
+                  <option value="462">Swaziland</option>
+                  <option value="314">Sweden</option>
+                  <option value="310">Switzerland</option>
+                  <option value="1034">Syria</option>
+                  <option value="354">Taiwan</option>
+                  <option value="372">Tajikstan</option>
+                  <option value="464">Tanzania</option>
+                  <option value="357">Thailand</option>
+                  <option value="482">Togo</option>
+                  <option value="434">Trinidad And Tobago</option>
+                  <option value="1027">Tunisia</option>
+                  <option value="329">Turkey</option>
+                  <option value="373">Turkmenistan</option>
+                  <option value="467">Uganda</option>
+                  <option value="313">Ukrania</option>
+                  <option value="1017">United Arab Emirates</option>
+                  <option value="297">United Kingdom</option>
+                  <option value="395">United States Of America</option>
+                  <option value="427">Uruguay</option>
+                  <option value="385">Uzbekistan</option>
+                  <option value="425">Venezuela</option>
+                  <option value="356">Vietnam</option>
+                  <option value="1030">Yemen</option>
+                  <option value="456">Zambia</option>
+                  <option value="459">Zimbabwe</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Code & Level -->
+      <div class="col-md-12">
+        <div class="title-block">
+          <div class="title"><span>4</span>Code &amp; Level</div>
+        </div>
+        <div class="row ft-query-row">
+          <div class="form-group col-md-6">
+            <label class="fs-16 form-label">Code</label>
+            <select class="form-control form-select" id="ft-itemCode">
+              <option value="0">Select</option>
+              <option value="HSCODE" selected>HSCODE</option>
+              <option value="SITC">SITC</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="fs-16 form-label">Level</label>
+            <select class="form-control form-select" id="ft-itemlevel">
+              <option value="0">Select</option>
+              <option value="HSCODE">2</option>
+              <option value="HSCODE">4</option>
+              <option value="HSCODE">8</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Items -->
+      <div class="col-md-12">
+        <div class="title-block">
+          <div class="title"><span>5</span>Items</div>
+        </div>
+        <div class="row ft-query-row">
+          <div class="form-group col-md-6" id="div-ft-itemclassification">
+            <label for="ft-trade" class="fs-16 form-label">Classification</label>
+            <select class="form-control form-select" id="ft-itemclassification">
+              <option value="-1">Select</option>
+              <option value="0">0 Food and Live Animals</option>
+              <option value="1">1 Beverages and Tobacco</option>
+              <option value="2">2 Crude Materials, Incredible, Except Fuels</option>
+              <option value="3">3 Mineral Fuels, Lubricants and Related Materials</option>
+              <option value="4">4 Animal and Vegetable Oils, Fats and Waxes</option>
+              <option value="5">5 Chemicals and Related Products N.E.S.</option>
+              <option value="6">6 Manufactured Goods Classified Chiefly by Material</option>
+              <option value="7">7 Machinery and Transport Equipment</option>
+              <option value="8">8 Miscellaneous Manufactured Articles</option>
+              <option value="9">9 Commodities and Transactions Etc</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="ft-trade" class="fs-16 form-label">All Items</label>
+            <select class="form-control form-select">
+              <option value="-1">Select</option>
+              <option value="0">0 Food and Live Animals</option>
+              <option value="1">1 Beverages and Tobacco</option>
+              <option value="2">2 Crude Materials, Incredible, Except Fuels</option>
+              <option value="3">3 Mineral Fuels, Lubricants and Related Materials</option>
+              <option value="4">4 Animal and Vegetable Oils, Fats and Waxes</option>
+              <option value="5">5 Chemicals and Related Products N.E.S.</option>
+              <option value="6">6 Manufactured Goods Classified Chiefly by Material</option>
+              <option value="7">7 Machinery and Transport Equipment</option>
+              <option value="8">8 Miscellaneous Manufactured Articles</option>
+              <option value="9">9 Commodities and Transactions Etc</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="col-md-12 mt-4">
+        <div class="search-footer">
+          <input type="button" class="btn btn-ft-primary me-2" value="Submit">
+          <input type="button" class="btn btn-ft-primary" value="Reset">
+        </div>
+      </div>
     </div>
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
       <li [ngbNavItem]="1" class="w-50">
@@ -15,7 +344,8 @@
               <option value="2">Name</option>
               <option value="3">Status</option>
             </select>
-            <input type="text" class="form-control w-auto" placeholder="Enter Filter Value" aria-label="Filter Value" aria-describedby="Filter Input">
+            <input type="text" class="form-control w-auto" placeholder="Enter Filter Value" aria-label="Filter Value"
+              aria-describedby="Filter Input">
             <!-- filter icon button -->
             <button class="btn btn-outline-primary" type="button" id="filter">Apply</button>
           </div>
@@ -32,11 +362,8 @@
               <tr *ngFor="let country of countries">
                 <th scope="row">{{ country.id }}</th>
                 <td>
-                  <img
-                    [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag"
-                    class="me-2"
-                    style="width: 20px"
-                  />
+                  <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2"
+                    style="width: 20px" />
                   {{ country.name }}
                 </td>
                 <td>{{ country.area | number}}</td>
@@ -46,12 +373,8 @@
           </table>
 
           <div class="d-flex justify-content-between p-2">
-            <ngb-pagination
-              [collectionSize]="collectionSize"
-              [(page)]="page"
-              [pageSize]="pageSize"
-              (pageChange)="refreshCountries()"
-            >
+            <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+              (pageChange)="refreshCountries()">
             </ngb-pagination>
 
             <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
@@ -72,7 +395,8 @@
               <option value="2">Name</option>
               <option value="3">Status</option>
             </select>
-            <input type="text" class="form-control w-auto" placeholder="Enter Filter Value" aria-label="Filter Value" aria-describedby="Filter Input">
+            <input type="text" class="form-control w-auto" placeholder="Enter Filter Value" aria-label="Filter Value"
+              aria-describedby="Filter Input">
             <!-- filter icon button -->
             <button class="btn btn-outline-primary" type="button" id="filter">Apply</button>
           </div>
@@ -89,11 +413,8 @@
               <tr *ngFor="let country of countries">
                 <th scope="row">{{ country.id }}</th>
                 <td>
-                  <img
-                    [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag"
-                    class="me-2"
-                    style="width: 20px"
-                  />
+                  <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2"
+                    style="width: 20px" />
                   {{ country.name }}
                 </td>
                 <td>{{ country.area | number}}</td>
@@ -103,12 +424,8 @@
           </table>
 
           <div class="d-flex justify-content-between p-2">
-            <ngb-pagination
-              [collectionSize]="collectionSize"
-              [(page)]="page"
-              [pageSize]="pageSize"
-              (pageChange)="refreshCountries()"
-            >
+            <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+              (pageChange)="refreshCountries()">
             </ngb-pagination>
 
             <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
